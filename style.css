@@ -1,12 +1,14 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Nuevo fondo verde degradado */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #2acf30 0%, #6236e4 100%);
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #0b6623 0%, #2ecc71 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -14,140 +16,159 @@ body {
     padding: 20px;
 }
 
+/* Tarjeta principal */
 .container {
-    background: rgb(41, 18, 80);
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
     max-width: 600px;
     width: 100%;
     padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(245, 242, 242, 0.86);
+    border-radius: 14px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+/* Título */
 h1 {
-    color: #fffcfc;
+    color: #d4ffd8;
     text-align: center;
     margin-bottom: 30px;
-    font-size: 32px;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+/* Subtítulo/descripción */
+p {
+    color: #e8ffe9;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Subtítulos de sección */
+h3 {
+    color: #a3ffb5;
+    margin-bottom: 12px;
+    font-size: 19px;
     font-weight: 600;
 }
 
-p {
-    color: #dce1ea;
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-h3 {
-    color: #2a5298;
-    margin-bottom: 15px;
-    font-size: 18px;
-    font-weight: 500;
-}
-
+/* Área general */
 .section {
     margin-bottom: 25px;
 }
 
+/* Etiquetas */
 label {
     display: block;
-    color: #efeded;
+    color: #e8ffe9;
     margin-bottom: 8px;
     font-weight: 500;
 }
 
+/* Textarea */
 textarea {
     width: 100%;
     padding: 12px;
-    border: 2px solid #e0e0e0;
-    border-radius: 4px;
+    border: 2px solid #51d47e;
+    border-radius: 6px;
     font-size: 16px;
     resize: vertical;
     min-height: 80px;
     font-family: inherit;
-    transition: border-color 0.3s;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: border-color 0.3s, background 0.3s;
 }
 
 textarea:focus {
     outline: none;
-    border-color: #2a5298;
+    border-color: #2ecc71;
+    background: rgba(255, 255, 255, 0.15);
 }
 
+/* Contador */
 .char-count {
     text-align: right;
-    color: #666;
+    color: #ccffd5;
     font-size: 12px;
     margin-top: 5px;
 }
 
+/* Display de matriz */
 .matriz-display {
-    background: #f5f5f5;
-    padding: 20px;
-    border-radius: 4px;
-    border: 2px solid #e0e0e0;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 18px;
+    border-radius: 6px;
+    border: 1px solid #3fda75;
     min-height: 60px;
     font-family: 'Courier New', monospace;
-    color: #333;
-    line-height: 1.8;
+    color: #e6ffe9;
 }
 
+/* Inputs numéricos */
 .matriz-input {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 12px;
     max-width: 200px;
 }
 
 .matriz-input input {
     padding: 12px;
-    border: 2px solid #e0e0e0;
-    border-radius: 4px;
+    border: 2px solid #51d47e;
+    border-radius: 6px;
     font-size: 18px;
     text-align: center;
-    transition: border-color 0.3s;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: 0.3s;
 }
 
 .matriz-input input:focus {
     outline: none;
-    border-color: #2a5298;
+    border-color: #2ecc71;
+    background: rgba(255, 255, 255, 0.2);
 }
 
+/* Botones */
 button {
     width: 100%;
     padding: 15px;
-    background: #2a5298;
+    background: #27ae60;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s;
-    margin: 20px 0;
+    transition: background 0.3s, transform 0.1s;
 }
 
 button:hover {
-    background: #1e3c72;
+    background: #1e8d4e;
 }
 
 button:active {
-    transform: scale(0.98);
+    transform: scale(0.97);
 }
 
+/* Resultado */
 .resultado-box {
-    background: #f5f5f5;
-    padding: 20px;
-    border-radius: 4px;
-    border: 2px solid #e0e0e0;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 18px;
+    border-radius: 6px;
+    border: 1px solid #3fda75;
     min-height: 60px;
     font-family: 'Courier New', monospace;
-    color: #333;
+    color: #e6ffe9;
     word-wrap: break-word;
 }
 
+/* Mensaje de error */
 .error {
-    color: #d32f2f;
-    background: #ffebee;
-    border-color: #d32f2f;
+    color: #ff4f4f;
+    background: rgba(255, 0, 0, 0.15);
+    border-color: #ff4f4f;
 }
